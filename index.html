@@ -1705,6 +1705,39 @@
             .top-bar { font-size: 0.75rem; }
             .bento-highlight h3 { font-size: 1.5rem; }
         }
+
+        .gal-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gal-item:hover img {
+    transform: scale(1.08);
+}
+
+.gal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.gal-item:hover .gal-overlay {
+    opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -2032,64 +2065,37 @@
         </div>
     </section>
 
-    <!-- MODERN GALLERY 
-    <section id="facilities" class="section-padding">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="tagline">Infrastructure</div>
-                <h2>Hospital Facilities</h2>
-                <p>Explore our clean, modern, and fully-equipped medical infrastructure.</p>
-            </div>
+    <div class="modern-gallery active" id="gal-all">
 
-            <div class="gallery-tabs reveal">
-                <button class="tab-btn active" data-filter="gal-all">All Photos</button>
-                <button class="tab-btn" data-filter="gal-ext">Exterior</button>
-                <button class="tab-btn" data-filter="gal-int">Interior & Facilities</button>
-            </div>
-
-            <div class="modern-gallery active" id="gal-all">
-                <div class="gal-item large">
-                    <div class="gal-placeholder"><i class="fa-regular fa-building"></i></div>
-                    <div class="gal-overlay"><i class="fa-solid fa-expand"></i></div>
-                </div>
-                <div class="gal-item">
-                    <div class="gal-placeholder"><i class="fa-solid fa-bed-pulse"></i></div>
-                    <div class="gal-overlay"><i class="fa-solid fa-expand"></i></div>
-                </div>
-                <div class="gal-item">
-                    <div class="gal-placeholder"><i class="fa-solid fa-microscope"></i></div>
-                    <div class="gal-overlay"><i class="fa-solid fa-expand"></i></div>
-                </div>
-                <div class="gal-item wide">
-                    <div class="gal-placeholder"><i class="fa-solid fa-hand-holding-droplet"></i></div>
-                    <div class="gal-overlay"><i class="fa-solid fa-expand"></i></div>
-                </div>
-                
-            </div>
-            
-            <div class="modern-gallery" id="gal-ext">
-                 <div class="gal-item large">
-                    <div class="gal-placeholder"><i class="fa-regular fa-building"></i></div>
-                </div>
-                 <div class="gal-item wide">
-                    <div class="gal-placeholder"><i class="fa-solid fa-ambulance"></i></div>
-                </div>
-            </div>
-            
-            <div class="modern-gallery" id="gal-int">
-                 <div class="gal-item wide">
-                    <div class="gal-placeholder"><i class="fa-solid fa-bed-pulse"></i></div>
-                </div>
-                 <div class="gal-item">
-                    <div class="gal-placeholder"><i class="fa-solid fa-microscope"></i></div>
-                </div>
-                 <div class="gal-item">
-                    <div class="gal-placeholder"><i class="fa-solid fa-hand-holding-droplet"></i></div>
-                </div>
-            </div>
+    <div class="gal-item large">
+        <img src="Images/7.webp" alt="Hospital Exterior">
+        <div class="gal-overlay">
+            <i class="fa-solid fa-expand"></i>
         </div>
-    </section> -->
+    </div>
 
+    <div class="gal-item">
+        <img src="Images/11.png" alt="Patient Ward">
+        <div class="gal-overlay">
+            <i class="fa-solid fa-expand"></i>
+        </div>
+    </div>
+
+    <div class="gal-item">
+        <img src="Images/3.webp" alt="Hospital Corridor">
+        <div class="gal-overlay">
+            <i class="fa-solid fa-expand"></i>
+        </div>
+    </div>
+
+    <div class="gal-item wide">
+        <img src="Images/25.png" alt="Parking View">
+        <div class="gal-overlay">
+            <i class="fa-solid fa-expand"></i>
+        </div>
+    </div>
+
+</div>
     <!-- APPOINTMENT & TIMINGS -->
     <section id="appointment" class="section-padding" style="background: var(--surface);">
         <div class="container">
